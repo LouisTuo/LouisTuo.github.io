@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Test]]></title>
+    <url>%2F2018%2F10%2F07%2FTest%2F</url>
+    <content type="text"><![CDATA[引入图片]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Markdown用法]]></title>
     <url>%2F2018%2F10%2F06%2FMarkdown%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[Markdown用法 三级标题 序号 序号 序号 序号 代码块1console.log("hello world"); 1select * from reportmgr.tbl_day_alarm 1System.out.println("Hello world");]]></content>
