@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[CentOS7下Tomcat启动慢的原因及解决方案]]></title>
-    <url>%2F2018%2F10%2F07%2FHi%2F</url>
-    <content type="text"><![CDATA[本文来自 枫之木落 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/qq_32337109/article/details/78755662?utm_source=copy]]></content>
-      <categories>
-        <category>云服务器</category>
-      </categories>
-      <tags>
-        <tag>centOS</tag>
-        <tag>tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Markdown用法]]></title>
     <url>%2F2018%2F10%2F06%2FMarkdown%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[Markdown用法三级标题 序号 序号 序号 序号 代码块1console.log("hello world"); 1select * from reportmgr.tbl_day_alarm 1System.out.println("Hello world");]]></content>
+    <content type="text"><![CDATA[Markdown用法 三级标题 序号 序号 序号 序号 代码块1console.log("hello world"); 1select * from reportmgr.tbl_day_alarm 1System.out.println("Hello world");]]></content>
       <categories>
         <category>Markdown</category>
       </categories>
