@@ -125,7 +125,7 @@
 <meta property="og:site_name" content="Louis">
 <meta property="og:description" content="ES61.兼容性 编译和转换：  在线编译 提前编译">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-07T15:43:06.999Z">
+<meta property="og:updated_time" content="2018-10-07T15:51:58.860Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6笔记">
 <meta name="twitter:description" content="ES61.兼容性 编译和转换：  在线编译 提前编译">
@@ -416,7 +416,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-10-07 23:43:06" itemprop="dateModified" datetime="2018-10-07T23:43:06+08:00">2018-10-07</time>
+                <time title="Modified: 2018-10-07 23:51:58" itemprop="dateModified" datetime="2018-10-07T23:51:58+08:00">2018-10-07</time>
               
             
           </span>
@@ -515,15 +515,23 @@
 </ol>
 <p>Ajax到底怎么回事呢？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//-----get------</span></span><br><span class="line">    <span class="comment">//1. 创建异步对象</span></span><br><span class="line">    <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    <span class="comment">//2. 连接</span></span><br><span class="line">    xhr.open(<span class="string">'get'</span>,<span class="string">'register.acion?usrname=xx'</span>,<span class="literal">true</span>);</span><br><span class="line">    <span class="comment">//3. 发送</span></span><br><span class="line">    xhr.send();</span><br><span class="line">    <span class="comment">//4. 接收</span></span><br><span class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// readyState通信状态</span></span><br><span class="line">        <span class="comment">//status，http状态码</span></span><br><span class="line">        <span class="keyword">if</span>(xhr.readyState==<span class="number">4</span> &amp;&amp; xhr.status==<span class="number">200</span>)&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(xhr.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//-------post----------</span></span><br><span class="line">    <span class="comment">//创建异步对象  </span></span><br><span class="line">    <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    <span class="comment">//设置请求的类型及url</span></span><br><span class="line">    <span class="comment">//post请求一定要添加请求头才行不然会报错</span></span><br><span class="line">    xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</span><br><span class="line">    xhr.open(<span class="string">'post'</span>, <span class="string">'02.post.php'</span> );</span><br><span class="line">    <span class="comment">//发送请求</span></span><br><span class="line">    xhr.send(<span class="string">'name=fox&amp;age=18'</span>);</span><br><span class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 这步为判断服务器是否正确响应</span></span><br><span class="line">    <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(xhr.responseText);</span><br><span class="line">    &#125; </span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
 <p>ajax，缓存<br>ajax 跨域 -CORS跨域<br>formData – Ajax2.0</p>
-<p>WebSocket</p>
-<p><code>`
-http 状态码   
+<ol start="2">
+<li>WebSocket</li>
+</ol>
+<pre><code>http状态码   
 1xx 消息  
 2xx 成功  
 3xx 重定向  （301 永久重定向 302 临时重定向 304）
 4xx 请求错误(客户端)  
 5xx 服务端错误  
-6xx 扩展</code>  </p>
+6xx 扩展
+</code></pre><ol start="3">
+<li>转发和重定向</li>
+</ol>
+<ul>
+<li>转发: 在服务器内部，转交给另外一个服务处理 – 地址不变</li>
+<li>重定向：给浏览器下命令，让浏览器请求另外一个地址 –地址可变</li>
+</ul>
 
       
     </div>
