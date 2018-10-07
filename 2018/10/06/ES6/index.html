@@ -108,24 +108,24 @@
 
 
 
-  <meta name="description" content="github新笔记">
+  <meta name="description" content="js笔记 thisthis代表当前对象，但是在事件中代表的是当前对象 排他性   使用id或者index 123456789window.onload = function () &amp;#123;       var button = document.getElementsByClassName(&quot;button&quot;);       for(var i = 0; i&amp;lt;button.length;i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hi">
-<meta property="og:url" content="http://yoursite.com/2018/10/06/hi/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/10/06/ES6/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="github新笔记">
+<meta property="og:description" content="js笔记 thisthis代表当前对象，但是在事件中代表的是当前对象 排他性   使用id或者index 123456789window.onload = function () &amp;#123;       var button = document.getElementsByClassName(&quot;button&quot;);       for(var i = 0; i&amp;lt;button.length;i">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:updated_time" content="2018-10-06T15:05:11.592Z">
+<meta property="og:updated_time" content="2018-10-05T16:46:24.643Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hi">
-<meta name="twitter:description" content="github新笔记">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="js笔记 thisthis代表当前对象，但是在事件中代表的是当前对象 排他性   使用id或者index 123456789window.onload = function () &amp;#123;       var button = document.getElementsByClassName(&quot;button&quot;);       for(var i = 0; i&amp;lt;button.length;i">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/06/hi/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/10/06/ES6/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>hi | Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -280,7 +280,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/hi/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/ES6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Louis Tuo">
@@ -297,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hi
+          <h1 class="post-title" itemprop="name headline">
               
             
           </h1>
@@ -322,7 +322,7 @@
                 
               
 
-              <time title="Post created: 2018-10-06 22:59:09 / Updated at: 23:05:11" itemprop="dateCreated datePublished" datetime="2018-10-06T22:59:09+08:00">2018-10-06</time>
+              <time title="Post created: 2018-10-06 23:49:46 / Updated at: 00:46:24" itemprop="dateCreated datePublished" datetime="2018-10-06T23:49:46+08:00">2018-10-06</time>
             
 
             
@@ -360,7 +360,42 @@
       
 
       
-        <h3 id="github新笔记"><a href="#github新笔记" class="headerlink" title="github新笔记"></a>github新笔记</h3>
+        <h4 id="js笔记"><a href="#js笔记" class="headerlink" title="js笔记"></a><center>js笔记</center></h4><ol>
+<li>this<br>this代表当前对象，但是在事件中代表的是当前对象</li>
+<li>排他性</li>
+</ol>
+<ul>
+<li><p>使用id或者index</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">var</span> button = <span class="built_in">document</span>.getElementsByClassName(<span class="string">"button"</span>);</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;button.length;i++)&#123; <span class="comment">//异步</span></span><br><span class="line">           button[i].id = i;</span><br><span class="line">           button[i].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">               alert(<span class="string">"你点了"</span>+<span class="keyword">this</span>.id+<span class="string">"按钮"</span>);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用闭包</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> button = <span class="built_in">document</span>.getElementsByClassName(<span class="string">"button"</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;button.length;i++)&#123; <span class="comment">//异步</span></span><br><span class="line">            (<span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">                button[i].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                    alert(<span class="string">"你点了"</span>+i+<span class="string">"按钮"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li><p>数组高级API</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.判断数组类型</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> arr); <span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">//true</span></span><br><span class="line"><span class="keyword">var</span> arr2 = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(arr2)); <span class="comment">//Array判断是否是数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.toString 转化成string，每个用，分割</span></span><br><span class="line"><span class="keyword">var</span> arr3 = [<span class="number">1</span>,<span class="number">3</span>,<span class="string">"我是"</span>,<span class="string">"hello"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr3.toString()); </span><br><span class="line"></span><br><span class="line"><span class="comment">//3. valueOf() 返回数组对象本身</span></span><br><span class="line"><span class="keyword">var</span> arr4 =  arr.valueOf();</span><br><span class="line"><span class="built_in">console</span>.log(arr4);</span><br><span class="line"></span><br><span class="line"><span class="comment">//4.join() 方法用于把数组中的所有元素放入一个字符串</span></span><br><span class="line"><span class="keyword">var</span> arr5 = arr3.join(<span class="string">"-"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr5);</span><br><span class="line"></span><br><span class="line"><span class="comment">//5.indexOf()和lastIndexOf()</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串string</p>
+</li>
+</ol>
+<h4 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a><center>ES6</center></h4><h5 id="1-兼容性"><a href="#1-兼容性" class="headerlink" title="1.兼容性"></a>1.兼容性</h5><p> 编译和转换：</p>
+<ul>
+<li>在线编译</li>
+<li>提前编译<h5 id="2-ES6语法"><a href="#2-ES6语法" class="headerlink" title="2.ES6语法"></a>2.ES6语法</h5></li>
+</ul>
+<ol>
+<li>变量</li>
+<li>函数</li>
+<li>数组</li>
+<li>字符串</li>
+<li>面向对象</li>
+<li>Promise</li>
+<li>generator</li>
+<li>模块化</li>
+</ol>
+<h5 id="3-通信相关"><a href="#3-通信相关" class="headerlink" title="3.通信相关"></a>3.通信相关</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">数据交互的几种方式:</span><br><span class="line">1. 表单</span><br><span class="line">2. Ajax，麻烦，安全</span><br><span class="line">3. JsonP，简单，有风险</span><br><span class="line">4. WebSocket</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -387,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/06/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/10/06/hi/" rel="next" title="hi">
+                <i class="fa fa-chevron-left"></i> hi
               </a>
             
           </div>
@@ -397,7 +432,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/10/06/ES6/" rel="prev" title="">
+              <a href="/2018/10/06/js/" rel="prev" title="">
                  <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -509,7 +544,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#github新笔记"><span class="nav-number">1.</span> <span class="nav-text">github新笔记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#js笔记"><span class="nav-number">1.</span> <span class="nav-text">js笔记</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6"><span class="nav-number">2.</span> <span class="nav-text">ES6</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-兼容性"><span class="nav-number">2.1.</span> <span class="nav-text">1.兼容性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-ES6语法"><span class="nav-number">2.2.</span> <span class="nav-text">2.ES6语法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-通信相关"><span class="nav-number">2.3.</span> <span class="nav-text">3.通信相关</span></a></li></ol></li></ol></div>
             
 
           </div>
